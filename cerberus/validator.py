@@ -1136,6 +1136,10 @@ class Validator(object):
         if not re_obj.match(value):
             self._error(field, errors.REGEX_MISMATCH)
 
+    def _validate_description(self, description, field, value):
+        """ {'type': 'string'} """
+        pass
+
     _validate_required = dummy_for_rule_validation(""" {'type': 'boolean'} """)
 
     def __validate_required_fields(self, document):
